@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('about-me', function () {
     $name = "Ahmed Mohmed";
     $age = 22;
-
+   
 
     return view('about',compact('name','age'));
 });
@@ -28,4 +28,21 @@ route::post('send', function(Request $request){
     $age = $request->myage;
     return view('about', compact('name','age'));
 
+});
+
+Route::get('tasks', function () {
+    
+    $tasks = ['1'=>'task01','2'=>'task02','3'=>'task03'];
+    
+   // dd($tasks[1]);
+        return view('tasks',compact('tasks'));
+});
+
+Route::get('task/show/{id}', function ($id) {
+    
+    $tasks = ['1'=>'task01','2'=>'task02','3'=>'task03'];
+    
+  $task = $tasks[$id];
+  //dd($task);
+    return view('show',compact('task'));
 });

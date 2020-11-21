@@ -6,7 +6,7 @@
     <title>about</title>
 </head>
 <body>
-    <p>My name is {{$name}}</p>
+   <p>My name is {{$name}}</p>
     <p>My Age is {{$age}}</p>
 
     <form action="send" method="post">
@@ -16,6 +16,9 @@
     Age
     <input type="number" name="myage" id="myage">
     <input type="submit" value="send">
-    </form>
+    </form> 
+  
+
+
 </body>
 </html>
